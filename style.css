@@ -1,0 +1,240 @@
+body {
+    margin:0;
+    padding:0;
+    background-color: #552323;
+    font-family: 'Roboto Condensed', sans-serif;
+  
+}
+
+.header {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    max-width: 100%;
+}
+
+.head {
+    background-color: black;
+}
+
+.connect {
+    max-width: 100%;
+    padding-top: 100px;
+    height: auto;
+}
+
+.styles {
+    max-width: 70%;
+    padding-top: 100px;
+    height: auto;
+}
+
+.footer {
+    padding-top: 200px;
+    max-width: 100%;
+}
+
+.location {
+    padding-top: 200px;
+    max-width: 100%;
+    padding-bottom: 50px;
+}
+
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    /*grid-template-columns: repeat(3, [col-start] 1fr [col-end]);*/
+    grid-gap: 0px;
+    padding-bottom: 50px;
+}
+
+.image{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50px;
+    opacity: 1;
+    transition: 5s ease;
+    backface-visibility: hidden;
+}
+
+.box {
+    padding: 5px;
+    display: inline-block;
+    margin: 10px;
+    opacity: .99;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+}
+  
+.img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    margin-top: 50px;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+  
+.container:hover .img {
+    opacity: 0.3;
+}
+  
+.container:hover .middle {
+    opacity: 1;
+}
+  
+.text {
+    color: #800020;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 16px 32px;
+}
+
+
+  
+ul {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    display:flex;
+    margin:0;
+    padding:0;
+}
+
+ul li {
+    list-style:none;
+    margin:0 5px;
+}
+
+ul li a .fa {
+    font-size: 40px;
+    color: #262626;
+    line-height:80px;
+    transition: .5s;
+    padding-right: 14px;
+}
+
+ul li a span {
+    padding:0;
+    margin:0;
+    position:absolute;
+    top: 30px;
+    color: #262626;
+    letter-spacing: 4px;
+    transition: .5s;
+}
+
+ul li a {
+    text-decoration: none;
+    /*display:absolute;*/
+    display:block;
+    width:210px;
+    height:80px;
+    background: #fff;
+    text-align:left;
+    padding-left: 20px;
+    transform: rotate(-30deg) skew(25deg) translate(0,0);
+    transition:.5s;
+    box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+}
+ul li a:before {
+    content: '';
+    position: absolute;
+    top:10px;
+    left:-20px;
+    height:100%;
+    width:20px;
+    background: #b1b1b1;
+    transform: .5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+ul li a:after {
+    content: '';
+    position: absolute;
+    bottom:-20px;
+    left:-10px;
+    height:20px;
+    width:100%;
+    background: #b1b1b1;
+    transform: .5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a:hover {
+    transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
+    box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+}
+
+ul li:hover .fa {
+    color:#262626;
+}
+
+ul li:hover span {
+    color:#262626;
+}
+
+#booksy {
+    padding-top: 15px;
+}
+
+#tiktok {
+    padding-top: 15px;
+}
+
+#social {
+    padding-top: 100px;
+    position: relative;
+}
+
+#map {
+    margin-bottom: 200px;
+    width: 50%;
+    height: 400px;
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.hours {
+    margin-top: 200px;
+    width: 50%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+
+}
+
+@media (max-width: 600px) and (min-width: 200px) {
+    .press { display:block;}
+
+    .press li {padding: 20px;}
+
+    .connect {padding-bottom: 100px;}
+
+    ul li a span {display: none;}
+
+    #map {width: 80%;}
+
+    .hours {width: 90%;}
+}
+
+@media (max-width: 500px) {
+    .press li a {width: 100%;}
+}
